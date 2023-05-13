@@ -24,13 +24,13 @@ class TicTacToeTests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
     func testInitValue_nineCells() {
-        let ticModel = TicModel()
+        let ticModel = TicViewModel()
 
         XCTAssertEqual(ticModel.grid.count, 9)
     }
     func test_initialValue_IsBlank() {
             // Arrange
-            let ticModel = TicModel()
+            let ticModel = TicViewModel()
             
             // Act
             
