@@ -35,7 +35,7 @@ class TicTacToeTests: XCTestCase {
             // Act
             
             // Assert
-            XCTAssertEqual((ticModel.grid.filter { $0 == cell.b }.count), 9)
+            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 9)
         }
 
 
@@ -46,6 +46,80 @@ class TicTacToeTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
+    class TicViewModelTests: XCTestCase {
+        
+        func test_initialValue_NineCells() {
+            // Arrange
+            let ticViewModel = TicViewModel()
+            // Act
+            
+            // Assert
+            XCTAssertEqual(ticViewModel.grid.count, 9)
+        }
+        
+        func test_initialValue_IsBlank() {
+            // Arrange
+            let ticViewModel = TicViewModel()
+            
+            // Act
+            
+            // Assert
+            XCTAssertEqual((ticViewModel.grid.filter { $0 == Cell.b }.count), 9)
+        }
+        
+        func test_setCell3_IsX() {
+            // Arrange
+            var ticModel = TicModel()
+            
+            // Act
+            ticModel.setCell(n: 3, c: .x)
+            
+            // Assert
+            XCTAssertTrue(ticModel.grid[3] == Cell.x)
+        }
+        
+        func test_setCell42_IsIgnored() {
+            // Arrange
+            var ticModel = TicModel()
+            
+            // Act
+            ticModel.setCell(n: 42, c: .x)
+            
+            // Assert
+            XCTAssertTrue(ticModel.grid.contains { $0 == Cell.b } )
+        }
+        
+        func test_setCellTwice_ignoreSecond() {
+            // Arrange
+            var ticModel = TicModel()
+            
+            // Act
+            ticModel.setCell(n: 3, c: .x)
+            ticModel.setCell(n: 3, c: .o)
+            
+            // Assert
+            XCTAssertTrue(ticModel.grid[3] == Cell.x)
+            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.x }.count), 1)
+            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 8)
+        }
+        
+        func test_setCellBlank_ignored() {
+            // Arrange
+            var ticModel = TicModel()
+            
+            // Act
+            ticModel.setCell(n: 3, c: .x)
+            ticModel.setCell(n: 3, c: .b)
+            
+            // Assert
+            XCTAssertTrue(ticModel.grid[3] == Cell.x)
+            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.x }.count), 1)
+            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 8)
+        }
+        
+    }
+
 }
 
 

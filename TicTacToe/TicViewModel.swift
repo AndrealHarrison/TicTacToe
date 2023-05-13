@@ -14,7 +14,7 @@ class TicViewModel: ObservableObject {
         ticModel = TicModel()
     }
     
-    var grid: [cell] {
+    var grid: [Cell] {
         get { ticModel.grid }
     }
 

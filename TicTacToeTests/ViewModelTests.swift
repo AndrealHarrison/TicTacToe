@@ -26,7 +26,7 @@ class TicViewModelTests: XCTestCase {
         // Act
         
         // Assert
-        XCTAssertEqual((ticViewModel.grid.filter { $0 == Cell.b }.count), 9)
+        XCTAssertEqual((ticViewModel.grid.filter { $0 == cell.b }.count), 9)
     }
 
     func test_initialValue_noWinner() {
@@ -44,7 +44,7 @@ class TicViewModelTests: XCTestCase {
         let ticViewModel = TicViewModel()
 
         // Act
-        let fullGrid: [Cell] = [.o, .x, .o,
+        let fullGrid: [cell] = [.o, .x, .o,
                                 .x, .o, .x,
                                 .x, .o, .x]
         for (n,c) in zip(0..<9, fullGrid) {
