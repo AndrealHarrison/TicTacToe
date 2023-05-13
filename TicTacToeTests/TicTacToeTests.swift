@@ -79,6 +79,18 @@ class TicViewModelTests: XCTestCase {
         // Assert
         XCTAssertTrue(ticModel.grid[3] == cell.x)
     }
+    
+    func test_setCell42_IsIgnored() {
+        // Arrange
+        var ticModel = TicModel()
+        
+        // Act
+        ticModel.setCell(n: 42, c: .x)
+        
+        // Assert
+        XCTAssertTrue(ticModel.grid.contains { $0 == cell.b } )
+    }
+
 
 }
 
