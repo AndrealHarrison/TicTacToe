@@ -14,6 +14,7 @@
 		44225F7A2A0F148B0054A563 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44225F792A0F148B0054A563 /* TicTacToeTests.swift */; };
 		44225F842A0F148B0054A563 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44225F832A0F148B0054A563 /* TicTacToeUITests.swift */; };
 		44225F862A0F148B0054A563 /* TicTacToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44225F852A0F148B0054A563 /* TicTacToeUITestsLaunchTests.swift */; };
+		44225F932A0F15200054A563 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44225F922A0F15200054A563 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		44225F7F2A0F148B0054A563 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44225F832A0F148B0054A563 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		44225F852A0F148B0054A563 /* TicTacToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		44225F922A0F15200054A563 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		44225F5C2A0F148B0054A563 = {
 			isa = PBXGroup;
 			children = (
+				44225F922A0F15200054A563 /* Model.swift */,
 				44225F672A0F148B0054A563 /* TicTacToe */,
 				44225F782A0F148B0054A563 /* TicTacToeTests */,
 				44225F822A0F148B0054A563 /* TicTacToeUITests */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44225F932A0F15200054A563 /* Model.swift in Sources */,
 				44225F6B2A0F148B0054A563 /* ContentView.swift in Sources */,
 				44225F692A0F148B0054A563 /* TicTacToeApp.swift in Sources */,
 			);
