@@ -68,6 +68,18 @@ class TicViewModelTests: XCTestCase {
         // Assert
         XCTAssertEqual((ticViewModel.grid.filter { $0 == cell.b }.count), 9)
     }
+    
+    func test_setCell3_IsX() {
+        // Arrange
+        var ticModel = TicModel()
+        
+        // Act
+        ticModel.setCell(n: 3, c: .x)
+        
+        // Assert
+        XCTAssertTrue(ticModel.grid[3] == cell.x)
+    }
+
 }
 
 
