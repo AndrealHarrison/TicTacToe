@@ -38,8 +38,6 @@ class TDD_TicTacToeTests: XCTestCase {
             XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 9)
         }
 
-    }
-    
 
 
     func testPerformanceExample() throws {
