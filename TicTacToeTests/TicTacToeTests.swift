@@ -28,6 +28,16 @@ class TDD_TicTacToeTests: XCTestCase {
 
         XCTAssertEqual(ticModel.grid.count, 9)
     }
+    func test_initialValue_NineCells() {
+            // Arrange
+            let ticModel = TicModel()
+            
+            // Act
+            
+            // Assert
+            XCTAssertEqual(ticModel.grid.count, 9)
+        }
+
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
