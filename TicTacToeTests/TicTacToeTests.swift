@@ -33,4 +33,19 @@ final class TicTacToeTests: XCTestCase {
         }
     }
 
+
+    class TicModelTests: XCTestCase {
+
+        func test_initialValue_NineCells() {
+            // Arrange
+            let ticModel = TicModel()
+            
+            // Act
+            
+            // Assert
+        }
+
+    }
+
+
 }
