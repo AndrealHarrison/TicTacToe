@@ -90,6 +90,35 @@ class TicViewModelTests: XCTestCase {
         // Assert
         XCTAssertTrue(ticModel.grid.contains { $0 == cell.b } )
     }
+    
+    func test_setCellTwice_ignoreSecond() {
+        // Arrange
+        var ticModel = TicModel()
+
+        // Act
+        ticModel.setCell(n: 3, c: .x)
+        ticModel.setCell(n: 3, c: .o)
+
+        // Assert
+        XCTAssertTrue(ticModel.grid[3] == Cell.x)
+        XCTAssertEqual((ticModel.grid.filter { $0 == Cell.x }.count), 1)
+        XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 8)
+    }
+
+    func test_setCellBlank_ignored() {
+        // Arrange
+        var ticModel = TicModel()
+
+        // Act
+        ticModel.setCell(n: 3, c: .x)
+        ticModel.setCell(n: 3, c: .b)
+
+        // Assert
+        XCTAssertTrue(ticModel.grid[3] == Cell.x)
+        XCTAssertEqual((ticModel.grid.filter { $0 == Cell.x }.count), 1)
+        XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 8)
+    }
+
 
 
 }
