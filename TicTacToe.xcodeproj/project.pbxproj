@@ -76,7 +76,6 @@
 		44225F5C2A0F148B0054A563 = {
 			isa = PBXGroup;
 			children = (
-				44225F922A0F15200054A563 /* Model.swift */,
 				44225F672A0F148B0054A563 /* TicTacToe */,
 				44225F782A0F148B0054A563 /* TicTacToeTests */,
 				44225F822A0F148B0054A563 /* TicTacToeUITests */,
@@ -97,6 +96,7 @@
 		44225F672A0F148B0054A563 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				44225F922A0F15200054A563 /* Model.swift */,
 				44225F682A0F148B0054A563 /* TicTacToeApp.swift */,
 				44225F6A2A0F148B0054A563 /* ContentView.swift */,
 				44225F6C2A0F148B0054A563 /* Assets.xcassets */,
