@@ -35,7 +35,7 @@ class TDD_TicTacToeTests: XCTestCase {
             // Act
             
             // Assert
-            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 9)
+            XCTAssertEqual((ticModel.grid.filter { $0 == cell.b }.count), 9)
         }
 
 
