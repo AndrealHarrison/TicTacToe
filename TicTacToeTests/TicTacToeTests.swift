@@ -28,15 +28,18 @@ class TDD_TicTacToeTests: XCTestCase {
 
         XCTAssertEqual(ticModel.grid.count, 9)
     }
-    func test_initialValue_NineCells() {
+    func test_initialValue_IsBlank() {
             // Arrange
             let ticModel = TicModel()
             
             // Act
             
             // Assert
-            XCTAssertEqual(ticModel.grid.count, 9)
+            XCTAssertEqual((ticModel.grid.filter { $0 == Cell.b }.count), 9)
         }
+
+    }
+    
 
 
     func testPerformanceExample() throws {
